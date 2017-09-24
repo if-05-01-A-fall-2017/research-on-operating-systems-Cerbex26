@@ -1,0 +1,9 @@
+QNX is a commercial Unix-like real-time operating system, aimed primarily at the embedded systems market. It was developed in the early 1980s by a canadian company (QNX Software Systems). Later acquired by Blackberry.
+QNX was one of the first commercially successful microkernel operating systems and is used in a variety of devices including cars and mobile phones.
+As a microkernel-based OS, it is based on the idea of running most of the operating system kernel in the form of a number of small tasks, known as servers.
+
+In the case of QNX, the use of a microkernel allows users (developers) to turn off any functionality they do not require without having to change the OS itself; instead, those servers will simply not run.
+The QNX kernel contains only CPU scheduling, interprocess communication, interrupt redirection and timers. Everything else runs as a user process, including a special process known as proc which performs process 
+creation and memory management by operating in conjunction with the microkernel.
+QNX interprocess communication consists of sending a message from one process to another and waiting for a reply. This is a single operation, called MsgSend. The message is copied, by the kernel, from the address space of the sending 
+process to that of the receiving process. If the receiving process is waiting for the message, control of the CPU is transferred at the same time, without a pass through the CPU scheduler.
